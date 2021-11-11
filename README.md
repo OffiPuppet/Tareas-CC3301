@@ -3,26 +3,26 @@ Tareas del curso CC3301 Programación de Software de Sistemas. Homeworks from CC
 
 ## Tarea 1
 
-Recortar una parte de un bit de un entero sin signo
+Recortar una parte de un bit de un entero sin signo.
 
-Remove a part of bits from an unsigned integer
+Remove a part of bits from an unsigned integer.
 
 ## Tarea 2
 
-Desplazar una parte de un string
+Desplazar una parte de un string.
 
-Shift a part of string
+Shift a part of string.
 
 ## Tarea 3
 
-Descomponer un ABB
+Descomponer un ABB.
 
-Split a BST into two BST based on a value
+Split a BST into two BST based on a value.
 
 ## Tarea 4
 
-WIP
+WIP.
 
 ## Tarea 5
 
-WIP
+WIP.
