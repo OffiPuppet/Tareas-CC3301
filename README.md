@@ -4,6 +4,7 @@ Tareas del curso CC3301 Programación de Software de Sistemas. Homeworks from CC
 ## Tarea 1
 
 -Recortar una parte de un bit de un entero sin signo
+
 -Remove a part of bits from an unsigned integer
 
 ## Tarea 2
