@@ -1,0 +1,575 @@
+==== make run ====
+cc -O -DBENCH=1 -Wall -Werror -pedantic -std=c18  desplazar.c test-desplazar.c -lm -o test-desplazar.bin
+Midiendo cuanto demora la solucion del profesor
+rm -f tiempo-ref.txt
+chmod +x prof.ref
+./prof.ref ref > /dev/null
+Tiempo de referencia =  4876
+Verificando y comparando con su solucion
+./test-desplazar.bin `cat tiempo-ref.txt`
+Test unitarios
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+Otros tests
+1er. test: desplazar "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+2do. test: desplazar "el norte " en -20 posiciones sin desborde
+Test aprobado
+3er. test: desplazar "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+4to. test: desplazar "cardinales" en -17 posiciones con desborde
+Test aprobado
+5to. test: desplazamiento de "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+6to. test: desplazamiento de "el norte " en -20 posiciones sin desborde
+Test aprobado
+7mo. test: desplazamiento de "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+8vo. test: desplazamiento de "cardinales" en -17 posiciones con desborde
+Test aprobado
+Benchmark
+Tiempo de cpu usado por su version: 4880 milisegundos
+Porcentaje de sobrecosto: 0 %
+Felicitaciones: su tarea aprobo todos los tests
+==== make run-g ====
+cc -g -Wall -Werror -pedantic -std=c18  desplazar.c test-desplazar.c -lm -o test-desplazar.bin-g
+./test-desplazar.bin-g
+Test unitarios
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+Otros tests
+1er. test: desplazar "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+2do. test: desplazar "el norte " en -20 posiciones sin desborde
+Test aprobado
+3er. test: desplazar "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+4to. test: desplazar "cardinales" en -17 posiciones con desborde
+Test aprobado
+5to. test: desplazamiento de "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+6to. test: desplazamiento de "el norte " en -20 posiciones sin desborde
+Test aprobado
+7mo. test: desplazamiento de "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+8vo. test: desplazamiento de "cardinales" en -17 posiciones con desborde
+Test aprobado
+Benchmark
+Tiempo de cpu usado por su version: 1534 milisegundos
+Felicitaciones: su tarea aprobo todos los tests
+==== make run-san ====
+cc -g -fsanitize=address -DSANITIZE -Wall -Werror -pedantic -std=c18  desplazar.c test-desplazar.c -lm -o test-desplazar.bin-san
+./test-desplazar.bin-san
+Test unitarios
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+Otros tests
+1er. test: desplazar "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+2do. test: desplazar "el norte " en -20 posiciones sin desborde
+Test aprobado
+3er. test: desplazar "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+4to. test: desplazar "cardinales" en -17 posiciones con desborde
+Test aprobado
+5to. test: desplazamiento de "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+6to. test: desplazamiento de "el norte " en -20 posiciones sin desborde
+Test aprobado
+7mo. test: desplazamiento de "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+8vo. test: desplazamiento de "cardinales" en -17 posiciones con desborde
+Test aprobado
+Benchmark
+Tiempo de cpu usado por su version: 4172 milisegundos
+Felicitaciones: su tarea aprobo todos los tests
+==== make run32 ====
+cc -O -m32 -Wall -Werror -pedantic -std=c18  desplazar.c test-desplazar.c -lm -o test-desplazar.bin32
+./test-desplazar.bin32
+Test unitarios
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+desplazar("01", 0, 1, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 1, 1) entrega "00"
+Test aprobado
+desplazar("01", 0, 2, -1) entrega "11"
+Test aprobado
+desplazar("01", 0, 2, 0) entrega "01"
+Test aprobado
+desplazar("01", 0, 2, 1) entrega "00"
+Test aprobado
+desplazar("01", 1, 1, -1) entrega "11"
+Test aprobado
+desplazar("01", 1, 1, 0) entrega "01"
+Test aprobado
+desplazar("012", 0, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 1, 1) entrega "002"
+Test aprobado
+desplazar("012", 0, 1, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 2, -1) entrega "112"
+Test aprobado
+desplazar("012", 0, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 2, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 2, 2) entrega "010"
+Test aprobado
+desplazar("012", 0, 3, -2) entrega "212"
+Test aprobado
+desplazar("012", 0, 3, -1) entrega "122"
+Test aprobado
+desplazar("012", 0, 3, 0) entrega "012"
+Test aprobado
+desplazar("012", 0, 3, 1) entrega "001"
+Test aprobado
+desplazar("012", 0, 3, 2) entrega "010"
+Test aprobado
+desplazar("012", 1, 1, -1) entrega "112"
+Test aprobado
+desplazar("012", 1, 1, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 1, 1) entrega "011"
+Test aprobado
+desplazar("012", 1, 2, -2) entrega "212"
+Test aprobado
+desplazar("012", 1, 2, -1) entrega "122"
+Test aprobado
+desplazar("012", 1, 2, 0) entrega "012"
+Test aprobado
+desplazar("012", 1, 2, 1) entrega "011"
+Test aprobado
+desplazar("012", 2, 1, -2) entrega "212"
+Test aprobado
+desplazar("012", 2, 1, -1) entrega "022"
+Test aprobado
+desplazar("012", 2, 1, 0) entrega "012"
+Test aprobado
+Otros tests
+1er. test: desplazar "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+2do. test: desplazar "el norte " en -20 posiciones sin desborde
+Test aprobado
+3er. test: desplazar "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+4to. test: desplazar "cardinales" en -17 posiciones con desborde
+Test aprobado
+5to. test: desplazamiento de "4 puntos " en 3 posiciones sin desborde
+Test aprobado
+6to. test: desplazamiento de "el norte " en -20 posiciones sin desborde
+Test aprobado
+7mo. test: desplazamiento de "norte y" en 9 posiciones con desborde
+Se pide desplazar 7 caracteres pero solo se pueden desplazar 5
+Test aprobado
+8vo. test: desplazamiento de "cardinales" en -17 posiciones con desborde
+Test aprobado
+Benchmark
+Tiempo de cpu usado por su version: 798 milisegundos
+Felicitaciones: su tarea aprobo todos los tests
