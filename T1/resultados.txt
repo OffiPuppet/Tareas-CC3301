@@ -1,0 +1,34 @@
+==== make run ====
+cc -O -Wall -Werror -pedantic -std=c18   recortar.c test-recortar.c -lm -o test-recortar.bin
+Midiendo cuanto demora la solucion del profesor
+rm -f tiempo-ref.txt
+./prof.binref ref | tee tiempo-ref.txt
+2681
+Verificando y comparando con su solucion
+./test-recortar.bin `cat tiempo-ref.txt`
+Tests unitarios
+Aprobado
+Test exhaustivo con 4960000 invocaciones de recortar
+Aprobado
+Corriendo benchmark
+Tiempo de cpu usado por la version del profesor: 2681 milisegundos
+Tiempo de cpu usado por su version: 2890 milisegundos
+Porcentaje de sobrecosto: 7 %
+Aprobado
+Felicitaciones, todos los tests funcionan correctamente
+==== make run-g ====
+cc -g -Wall -Werror -pedantic -std=c18   recortar.c test-recortar.c -lm -o test-recortar.bin-g 
+./test-recortar.bin-g
+Tests unitarios
+Aprobado
+Test exhaustivo con 49600000 invocaciones de recortar
+Aprobado
+Felicitaciones, todos los tests funcionan correctamente
+==== make run32 ====
+cc -O -m32 -Wall -Werror -pedantic -std=c18   recortar.c test-recortar.c -lm -o test-recortar.bin32
+./test-recortar.bin32
+Tests unitarios
+Aprobado
+Test exhaustivo con 49600000 invocaciones de recortar
+Aprobado
+Felicitaciones, todos los tests funcionan correctamente
