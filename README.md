@@ -27,6 +27,6 @@ WIP.
 
 WIP.
 
-## tarea 6
+## Tarea 6
 
 WIP.
