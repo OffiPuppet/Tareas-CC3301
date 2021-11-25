@@ -19,14 +19,3 @@ Descomponer un ABB.
 
 Split a BST into two BST based on a value.
 
-## Tarea 4
-
-WIP.
-
-## Tarea 5
-
-WIP.
-
-## Tarea 6
-
-WIP.
