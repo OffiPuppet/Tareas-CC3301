@@ -1,0 +1,1 @@
+mas grande: /opt/riscv/libexec/gcc/riscv64-unknown-elf/11.1.0/cc1plus de 253939528 bytes
