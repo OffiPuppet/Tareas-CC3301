@@ -1,1 +1,0 @@
-mas grande: ./big-file.txt de 68719476749 bytes
