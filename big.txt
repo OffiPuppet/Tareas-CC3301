@@ -1,4 +1,0 @@
-Depure con: ddd mas-grande.bin-g
-o:          ddd mas-grande.bin-san
-Defina los breakpoints que estime convenientes
-En ddd ingrese el comando:
