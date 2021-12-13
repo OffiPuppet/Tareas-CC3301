@@ -23,5 +23,5 @@ Split a BST into two BST based on a value.
 
 Determinar el archivo más grande.
 
-determine the size of the largest file or directory.
+Determine the size of the largest file or directory.
 
