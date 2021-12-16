@@ -1,0 +1,77 @@
+==== make run ====
+cc -O -DBENCH=1 -Wall -Werror -pedantic -std=c18  prev.c test.c -lm -o test.bin
+Midiendo cuanto demora la solucion del profesor
+rm -f tiempo-ref.txt
+chmod +x prof.ref
+./prof.ref ref > /dev/null
+Tiempo de referencia =  15558
+Verificando y comparando con su solucion
+./test.bin `cat tiempo-ref.txt`
+===============================
+Tests de la funcion asignarPrev
+===============================
+
+Caso arbol nulo: debe continuar vacio
+Caso arbol de un nodo con x=5
+Caso abb de un nodo x=1 con subarbol derecho x=2
+Caso abb de un nodo x=2 con subarbol izquierdo x=1
+Caso abb de un nodo x=2 con subarboles izquierdo y derecho
+Caso abb del enunciado
+Caso abbs de 1 a 100 nodos, equilibrado, desequilibrado por izquierda y derecha
+
+==================================
+Benchmark de asignarPrev
+==================================
+
+Tiempo = 15368 milisegundos
+Tiempo de referencia = 15558 milisegundos
+Porcentaje de sobrecosto de asignarPrev: 0 %
+Felicitaciones: su solucion es correcta y eficiente
+==== make run-g ====
+cc -g -Wall -Werror -pedantic -std=c18  prev.c test.c -lm -o test.bin-g
+./test.bin-g
+===============================
+Tests de la funcion asignarPrev
+===============================
+
+Caso arbol nulo: debe continuar vacio
+Caso arbol de un nodo con x=5
+Caso abb de un nodo x=1 con subarbol derecho x=2
+Caso abb de un nodo x=2 con subarbol izquierdo x=1
+Caso abb de un nodo x=2 con subarboles izquierdo y derecho
+Caso abb del enunciado
+Caso abbs de 1 a 100 nodos, equilibrado, desequilibrado por izquierda y derecha
+Tiempo = 144 milisegundos
+Felicitaciones: su solucion es correcta
+==== make run-san ====
+cc -g -fsanitize=address -fsanitize=undefined -DSANITIZE -Wall -Werror -pedantic -std=c18  prev.c test.c -lm -o test.bin-san
+./test.bin-san
+===============================
+Tests de la funcion asignarPrev
+===============================
+
+Caso arbol nulo: debe continuar vacio
+Caso arbol de un nodo con x=5
+Caso abb de un nodo x=1 con subarbol derecho x=2
+Caso abb de un nodo x=2 con subarbol izquierdo x=1
+Caso abb de un nodo x=2 con subarboles izquierdo y derecho
+Caso abb del enunciado
+Caso abbs de 1 a 100 nodos, equilibrado, desequilibrado por izquierda y derecha
+Tiempo = 1624 milisegundos
+Felicitaciones: su solucion es correcta
+==== make run32 ====
+cc -O -m32 -Wall -Werror -pedantic -std=c18  prev.c test.c -lm -o test.bin32
+./test.bin32
+===============================
+Tests de la funcion asignarPrev
+===============================
+
+Caso arbol nulo: debe continuar vacio
+Caso arbol de un nodo con x=5
+Caso abb de un nodo x=1 con subarbol derecho x=2
+Caso abb de un nodo x=2 con subarbol izquierdo x=1
+Caso abb de un nodo x=2 con subarboles izquierdo y derecho
+Caso abb del enunciado
+Caso abbs de 1 a 100 nodos, equilibrado, desequilibrado por izquierda y derecha
+Tiempo = 170 milisegundos
+Felicitaciones: su solucion es correcta
