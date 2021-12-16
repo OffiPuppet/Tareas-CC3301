@@ -25,3 +25,14 @@ Determinar el archivo más grande.
 
 Determine the size of the largest file or directory.
 
+## C1P2
+
+Sumar decimales y retornar su suma en formato decimal.
+
+Add two numbers and return their sum in decimal format
+
+## C1P3
+
+Asignar los campos prev y prox agregados a la estructura de los nodos en un árbol t.
+
+Assing prev and prox fields added to the structure of nodes of tree t.
